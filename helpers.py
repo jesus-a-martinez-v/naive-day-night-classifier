@@ -10,6 +10,7 @@ def load_dataset(image_directory):
     image_list = []
     image_types = {'day', 'night'}
     
+    # Iterave over each subfolder corresponding to the type of image and add the image to the resulting list.
     for image_type in image_types:
         for file in glob.glob(os.path.join(image_directory, image_type, '*')):
             image = mpimg.imread(file)
